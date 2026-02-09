@@ -1,8 +1,6 @@
 jobs:
-  start:
-    image: "ubuntu:24.04"
-    requires:
-      - ~commit
+  main:
+    requires: [~commit]
+    image: node:lts
     steps:
-      - first: echo 1
-      - second: echo 2
+      - test: echo 1
