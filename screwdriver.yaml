@@ -21,6 +21,6 @@ jobs:
   next-job:
     image: ubuntu:24.04
     requires:
-      - main
+      - start
     steps:
      - echo ${ECHO4}
