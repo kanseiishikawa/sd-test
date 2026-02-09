@@ -1,6 +1,7 @@
 jobs:
   main:
-    requires: [~commit]
-    image: node:lts
+    requires: [~pr, ~commit]
+    # Steps definition block.
     steps:
-      - test: echo 1
+      - export: export GREETING="Hello, world!"
+      - hello: echo $GREETING
