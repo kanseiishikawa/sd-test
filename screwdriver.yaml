@@ -1,21 +1,8 @@
-shared:
-  environment:
-    ECHO4: 4
 jobs:
   start:
-    image: ubuntu:24.04
+    image: "ubuntu:24.04"
     requires:
       - ~commit
     steps:
       - first: echo 1
       - second: echo 2
-      - third: echo ${ECHO3}
-      - fourth: echo ${ECHO4}
-    environment:
-      ECHO3: 3
-  next-job:
-    image: ubuntu:24.04
-    requires:
-      - start
-    steps:
-     - first: echo ${ECHO4}
