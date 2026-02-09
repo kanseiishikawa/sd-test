@@ -1,3 +1,6 @@
+shared:
+  # Source: https://hub.docker.com/r/library/buildpack-deps/
+  image: buildpack-deps
 jobs:
   main:
     requires: [~pr, ~commit]
