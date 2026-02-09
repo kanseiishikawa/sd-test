@@ -1,6 +1,11 @@
 shared:
   environment:
     ECHO4: 4
+parameters:
+  region: "us-west-1"
+  az: 
+      value: "zone 1"
+      description: "default availability zone"
 jobs:
   start:
     image: ubuntu:24.04
@@ -15,5 +20,7 @@ jobs:
       ECHO3: 3
   next-job:
     image: ubuntu:24.04
+    requires:
+      - main
     steps:
      - echo ${ECHO4}
