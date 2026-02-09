@@ -12,10 +12,10 @@ jobs:
     requires:
       - ~commit
     steps:
-      - echo 1
-      - echo 2
-      - echo ${ECHO3}
-      - echo ${ECHO4}
+      - first: echo 1
+      - second: echo 2
+      - third: echo ${ECHO3}
+      - fourth: echo ${ECHO4}
     environment:
       ECHO3: 3
   next-job:
@@ -23,4 +23,4 @@ jobs:
     requires:
       - start
     steps:
-     - echo ${ECHO4}
+     - first: echo ${ECHO4}
