@@ -1,14 +1,10 @@
 shared:
   # Source: https://hub.docker.com/r/library/buildpack-deps/
   image: node
-  annotations:
-    screwdriver.cd/coverage: false
 jobs:
   main:
     requires: [~pr, ~commit]
     # Steps definition block.
-    settings:
-      coverage: false
     steps:
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING
