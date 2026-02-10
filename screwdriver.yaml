@@ -2,7 +2,7 @@ shared:
   # Source: https://hub.docker.com/r/library/buildpack-deps/
   image: node
   annotations:
-    screwdriver.cd/launcherVersion: stable
+    screwdriver.cd/coverage: false
 jobs:
   main:
     requires: [~pr, ~commit]
