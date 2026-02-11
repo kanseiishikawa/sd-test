@@ -3,7 +3,8 @@ shared:
 jobs:
   main:
     requires: [~pr, ~commit]
-    # Steps definition block.
+    annotations:
+      screwdriver.cd/dockerEntrypoint: ["/bin/sh", "-c"]
     steps:
       - export: export GREETING="Hello, world!"
       - hello: echo $GREETING
