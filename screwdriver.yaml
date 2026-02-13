@@ -1,5 +1,5 @@
 shared:
-  image: node:20-slim
+  image: node:20
 jobs:
   main:
     requires: [~pr, ~commit]
